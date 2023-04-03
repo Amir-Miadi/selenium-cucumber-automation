@@ -52,6 +52,18 @@ public class Setup {
 			firefoxOptions.setProfile(profile);
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
+			
+			FirefoxProfile profile1 = new FirefoxProfile();
+		    profile1.setPreference("browser.download.folderList", 1);
+		    profile1.setPreference("browser.download.manager.showWhenStarting", false);
+		    profile1.setPreference("browser.download.manager.focusWhenStarting", false);
+		    profile1.setPreference("browser.download.useDownloadDir", true);
+		    profile1.setPreference("browser.helperApps.alwaysAsk.force", false);
+		    profile1.setPreference("browser.download.manager.alertOnEXEOpen", false);
+		    profile1.setPreference("browser.download.manager.closeWhenDone", true);
+		    profile1.setPreference("browser.download.manager.showAlertOnComplete", false);
+		    profile1.setPreference("browser.download.manager.useWindow",false);
+			
 			break;
 		default:
 			throw new IllegalArgumentException("Browser \"" + browser + "\" is not supported. ");
