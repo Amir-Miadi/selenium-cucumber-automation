@@ -76,7 +76,7 @@ package com.e2eTest.automation.utils;
 
 				Row = ExcelWSheet.getRow(RowNum);
 
-				Cell = Row.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
+				Cell = Row.getCell(ColNum, org.apache.poi.ss.usermodel.Row.RETURN_BLANK_AS_NULL);
 
 				if (Cell == null) {
 
